@@ -1,4 +1,4 @@
-package cas;
+package container.cas;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
