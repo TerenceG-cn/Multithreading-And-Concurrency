@@ -1,4 +1,4 @@
-package container.cas.ConcurrentHashMap.cache;
+package container.cas.ConcurrentHashMap;
 
 
 import org.slf4j.Logger;

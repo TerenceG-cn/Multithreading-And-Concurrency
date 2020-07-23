@@ -31,6 +31,8 @@ public class DBPoolSemaphore {
         if(connection!=null) {
             System.out.println("Thread_"+Thread.currentThread().getId()+"在尝试归还；"+"当前有"+useful.getQueueLength()+"个线程等待数据库连接！！"
                     +"可用连接数:"+useful.availablePermits());
+            //获取等待获取信号量的线程数目int getQueueLength();
+            //返回当前可用的信号量数目，此方法通常用于调试int availablePermits();
             useless.acquire();
             synchronized (pool) {
                 pool.addLast(connection);
