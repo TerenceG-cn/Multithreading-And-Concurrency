@@ -14,8 +14,11 @@ public class CellularAutomata {
     public CellularAutomata(Board board) {
         this.mainBoard = board;
         int count = Runtime.getRuntime().availableProcessors();
-        this.barrier = new CyclicBarrier(count,//
-                () -> mainBoard.commitNewValues());
+        //this.barrier = new CyclicBarrier(count, mainBoard::commitNewValues);/*lambda表达式1*/
+        //this.barrier = new CyclicBarrier(count, ()->mainBoard.commitNewValues());
+        this.barrier = new CyclicBarrier(count, new Runnable() {
+            public void run(){mainBoard.commitNewValues();}
+        });
         this.workers = new Worker[count];
         for (int i = 0; i < count; i++) {//线程数和初始化barrier时一样
             //分解成子问题
