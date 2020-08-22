@@ -1,6 +1,5 @@
 package resultCache;
 
-import jdk.vm.ci.aarch64.AArch64;
 import net.jcip.annotations.GuardedBy;
 
 import java.util.HashMap;
