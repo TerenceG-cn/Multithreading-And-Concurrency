@@ -1,6 +1,5 @@
 package container;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -26,14 +25,7 @@ public class TryConcurrentHashMap {
             }
          */
         concurrentHashMap.replace(1, 1, 0);
-        /*
-            public boolean remove(Object key, Object value) {
-                if (key == null)
-                    throw new NullPointerException();
-                return value != null && replaceNode(key, null, value) != null;
-            }
 
-         */
         concurrentHashMap.replace(1, 2);
         /*
         public boolean replace(K key, V oldValue, V newValue) {

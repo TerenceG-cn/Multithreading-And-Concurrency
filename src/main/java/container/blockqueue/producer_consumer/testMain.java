@@ -10,6 +10,7 @@ public class testMain {
         int indexrCnt=0,fileCrawlerCnt=0;
         File file = new File("C:\\Program Files\\Java\\jdk-14");
         File[] roots = file.listFiles();
+        assert roots != null;
         final int BOUND = 10;
         final int N_CONSUMERS = Runtime.getRuntime().availableProcessors();//获得可用的处理器个数,这个值并不准确
         System.out.println("处理器个数："+N_CONSUMERS);

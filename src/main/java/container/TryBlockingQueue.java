@@ -8,6 +8,7 @@ public class TryBlockingQueue {
         BlockingQueue<Integer> lbq = new LinkedBlockingQueue<>();//最好指定容量，默认MAX_VALUE
         BlockingQueue<Integer> alq = new ArrayBlockingQueue<>(capcity);
         BlockingQueue<Integer> synq = new SynchronousQueue<>();// to do
+        BlockingQueue<Integer> pq = new PriorityBlockingQueue<>();// to do
         lbq.put(1);
         lbq.take();
         alq.add(1);

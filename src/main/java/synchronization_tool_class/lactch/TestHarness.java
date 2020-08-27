@@ -29,8 +29,8 @@ public class TestHarness {
             t.start();
         }
         long start=System.nanoTime();//纳秒,返回当前JVM的高精度时间。该方法只能用来测量时段而和系统时间无关。它的返回值是从某个固定但随意的时间点开始的（可能是未来的某个时间）。不同的JVM使用的起点可能不同。
-        startGate.countDown();
-        endGate.await();
+        startGate.countDown();//同时释放线程
+        endGate.await();//等待最后一个线程执行结束
         long end = System.nanoTime();
         return end-start;
     }
