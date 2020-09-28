@@ -70,7 +70,8 @@ public class BlockingQueueTest {
     }
 
     public static void search(File file,String keyword) throws IOException{
-        try(Scanner in=new Scanner(file, StandardCharsets.UTF_8)){
+        //try(Scanner in=new Scanner(file, StandardCharsets.UTF_8)){
+        try(Scanner in=new Scanner(file)){
             int lineNumber=0;
             while(in.hasNext()){
                 lineNumber++;
