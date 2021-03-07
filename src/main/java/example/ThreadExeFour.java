@@ -12,6 +12,7 @@ public class ThreadExeFour {
     }
 
     static class Work implements Runnable{
+        @Override
         public void run(){
             System.out.println("thread start: "+Thread.currentThread().getName());
         }
