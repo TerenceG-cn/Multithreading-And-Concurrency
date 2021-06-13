@@ -7,14 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="multithreading-and-concurrency" />
-        <module name="Multithreading-And-Concurrency" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="14">
+    <bytecodeTargetLevel>
       <module name="multithreading-and-concurrency" target="8" />
     </bytecodeTargetLevel>
-  </component>
-  <component name="JavacSettings">
-    <option name="GENERATE_NO_WARNINGS" value="true" />
   </component>
 </project>
