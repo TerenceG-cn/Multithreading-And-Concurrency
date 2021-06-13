@@ -23,12 +23,14 @@ public class Renderer {
         List<ImageInfo> infos=scanForImageInfo(source);
         CompletionService<ImageData> completionService=new ExecutorCompletionService<ImageData>(executor);
         for (final ImageInfo imageInfo:infos){
-            completionService.submit(new Callable<ImageData>() {
-                @Override
-                public ImageData call() throws Exception {
-                    return imageInfo.downloadImage();
-                }
-            });
+            completionService.submit(
+                    new Callable<ImageData>() {
+                        @Override
+                        public ImageData call() throws Exception {
+                            return imageInfo.downloadImage();
+                        }
+                    }
+            );
         }
         renderText(source);
 
